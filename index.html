@@ -21,30 +21,30 @@
         <!-- sessão principal -->
         <section class="review">
             <!-- Imagem -->
-            <div class="review-image">
-                <img src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
+            <div class="review-image" >
+                <img id="img" src="https://images.unsplash.com/photo-1517841905240-472988babdf9?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=387&q=80" alt="">
             </div>
 
             <!-- informações do perfil -->
             <div class="review-profile">
                 <h4 id="author">Joe Doe</h4>
-                <p>Ux Designer</p>
+                <p id="job">Ux Designer</p>
             </div>
 
             <!-- descrição do autor -->
             <div class="description">
-                <p>
+                <p id="text">
                     Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quo tempore impedit nisi quisquam, numquam, ducimus temporibus dolorum quia magni sequi, veritatis consequuntur ullam quidem totam possimus facere inventore soluta voluptatem?
                 </p>
             </div>
 
             <!-- botões -->
             <div class="review-buttons">
-                <button class="prev-button">
+                <button class="prev-button" onclick="Previous()">
                     <i class="ph ph-caret-left"></i>
                 </button>
 
-                <button class="next-button">
+                <button class="next-button" onclick="Next()">
                     <i class="ph ph-caret-right"></i>
                 </button>
             </div>

@@ -28,3 +28,29 @@ const reviews = [
         text: "Edison bulp put a bird on it humblebrag, marfa pok pok heirloom fashion axe crazy stumptown venmo actually seitan.",
     }
 ]
+
+
+
+let i = 0
+
+function Next(){
+    i++
+    if(i==4){
+        i=0
+        Next(i)
+    }
+    document.getElementById("author").innerHTML = reviews[i].name
+    document.getElementById("job").innerHTML = reviews[i].job
+    document.getElementById("img").setAttribute("src", reviews[i].image);
+    document.getElementById("text").innerHTML = reviews[i].text
+}
+function Previous(){
+    i--
+    if(i==4){
+        i=0
+        Previous(i)
+    }
+    document.getElementById("author").innerHTML = reviews[i].name
+    document.getElementById("job").innerHTML = reviews[i].job
+    document.getElementById("img").setAttribute("src", reviews[i].image); document.getElementById("text").innerHTML = reviews[i].text
+}
