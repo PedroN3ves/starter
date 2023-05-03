@@ -31,26 +31,34 @@ const reviews = [
 
 
 
-let i = -1
+let i = 0
 
-function Next(){
-    i++
-    if(i==4){
-        i=-1
+function Next() {
+    if (i == 4) {
+        i = 0
         Next(i)
     }
+    showPerson(i);
+    i++
+}
+
+function Previous() {
+    if (i < 0) {
+        i = 3
+        Previous(i)
+    }
+
+    showPerson(i);
+    i--
+}
+
+function random() {
+    showPerson(Math.floor(Math.random() * 4));
+}
+
+function showPerson(i) {
     document.getElementById("author").innerHTML = reviews[i].name
     document.getElementById("job").innerHTML = reviews[i].job
     document.getElementById("img").setAttribute("src", reviews[i].image);
     document.getElementById("text").innerHTML = reviews[i].text
-}
-function Previous(){
-    i--
-    if(i==4){
-        i=-1
-        Previous(i)
-    }
-    document.getElementById("author").innerHTML = reviews[i].name
-    document.getElementById("job").innerHTML = reviews[i].job
-    document.getElementById("img").setAttribute("src", reviews[i].image); document.getElementById("text").innerHTML = reviews[i].text
 }
