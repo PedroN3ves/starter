@@ -31,12 +31,12 @@ const reviews = [
 
 
 
-let i = 0
+let i = -1
 
 function Next(){
     i++
     if(i==4){
-        i=0
+        i=-1
         Next(i)
     }
     document.getElementById("author").innerHTML = reviews[i].name
@@ -47,7 +47,7 @@ function Next(){
 function Previous(){
     i--
     if(i==4){
-        i=0
+        i=-1
         Previous(i)
     }
     document.getElementById("author").innerHTML = reviews[i].name
